@@ -12,7 +12,9 @@ const server = http.createServer((req, res) => {
 function respondHello (req, res) {
   res.end(JSON.stringify({ msg: 'hello' }))
 }
-
+function respondchallenge (req, res) {
+  res.end(JSON.stringify({ msg: 'challenge' }))
+}
 function respondUserAgent (req, res) {
   const ua = req.headers['user-agent']
   res.end(JSON.stringify({ ua }))
